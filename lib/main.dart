@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
-import 'package:my_ams/screens/screen1.dart';
+// import 'package:my_ams/screens/auth/login.dart';
+import 'package:my_ams/widgets/global/myAppBar.dart';
+// import 'package:my_ams/screens/screen1.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,11 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        textTheme: const TextTheme(
-          
-        )
-      ),
+      theme: ThemeData(textTheme: const TextTheme()),
       home: HomePage(),
     );
   }
@@ -30,28 +28,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blue,
-        foregroundColor: Colors.white,
-        title: const Text(
-          "My AMS",
-          style: TextStyle(fontWeight: FontWeight.bold),
-        ),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.qr_code_scanner_sharp),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const QRScannerPage()),
-              );
-            },
-          ),
-          IconButton(icon: const Icon(Icons.notifications), onPressed: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) => const Screen1()));
-          }),
-        ],
-      ),
+      appBar: MyAppBar(title: "Home"),
       body: const Center(child: Text("Welcome to My AMS")),
     );
   }
