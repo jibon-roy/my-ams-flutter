@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_ams/providers/color_provider.dart';
 
 class LoginScreen extends StatefulWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+  const LoginScreen({super.key});
 
   @override
   _LoginScreenState createState() => _LoginScreenState();
