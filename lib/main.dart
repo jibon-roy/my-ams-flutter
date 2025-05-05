@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 // import 'package:my_ams/screens/auth/login.dart';
-import 'package:my_ams/widgets/global/myAppBar.dart';
+import 'package:my_ams/widgets/global/my_app_bar.dart';
 // import 'package:my_ams/screens/screen1.dart';
 
 void main() {

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_ams/providers/color_provider.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -31,6 +32,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 decoration: InputDecoration(
                   labelText: 'Email',
                   hintText: 'Enter your email',
+                  prefixIcon: Icon(Icons.email),
                   border: OutlineInputBorder(),
                 ),
                 validator: (value) {
@@ -47,7 +49,13 @@ class _LoginScreenState extends State<LoginScreen> {
                 decoration: InputDecoration(
                   labelText: 'Password',
                   hintText: 'Enter your password',
-                  border: OutlineInputBorder(),
+                  prefixIcon: Icon(Icons.lock),
+                  // border with color
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
+                    borderSide: BorderSide(color: ColorProvider().primaryColor),
+                  ),
+                  // border:  OutlineInputBorder(),
                 ),
                 validator: (value) {
                   if (value!.isEmpty) {

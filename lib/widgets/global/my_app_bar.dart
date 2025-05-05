@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:my_ams/main.dart';
+import 'package:my_ams/providers/color_provider.dart';
 import 'package:my_ams/screens/auth/login.dart';
 
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
   final List<Widget> actions;
 
-  MyAppBar({required this.title, this.actions = const []});
+  const MyAppBar({super.key, required this.title, this.actions = const []});
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Colors.blue,
+      backgroundColor: ColorProvider().secondaryColor,
       foregroundColor: Colors.white,
       title: const Text(
         "My AMS",

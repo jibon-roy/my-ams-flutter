@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ColorProvider with ChangeNotifier {
-  Color _primaryColor = const Color.fromRGBO(59, 99, 117, 1);
-  Color _secondaryColor = Color.fromRGBO(38, 94, 163, 1);
+  Color _primaryColor = Color.fromRGBO(36, 101, 166, 1);
+  Color _secondaryColor = Color.fromRGBO(59, 99, 117, 1);
   Color _accentColor = Color.fromRGBO(173, 171, 176, 1);
 
   Color get primaryColor => _primaryColor;
