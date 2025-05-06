@@ -32,8 +32,18 @@ class _LoginScreenState extends State<LoginScreen> {
                 decoration: InputDecoration(
                   labelText: 'Email',
                   hintText: 'Enter your email',
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: ColorProvider().primaryColor),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
                   prefixIcon: Icon(Icons.email),
-                  border: OutlineInputBorder(),
+                  focusColor: ColorProvider().primaryColor,
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      color: ColorProvider().secondaryColor,
+                    ),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
                 ),
                 validator: (value) {
                   if (value!.isEmpty) {
@@ -50,6 +60,11 @@ class _LoginScreenState extends State<LoginScreen> {
                   labelText: 'Password',
                   hintText: 'Enter your password',
                   prefixIcon: Icon(Icons.lock),
+                  focusColor: ColorProvider().primaryColor,
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: ColorProvider().primaryColor),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
                   // border with color
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
